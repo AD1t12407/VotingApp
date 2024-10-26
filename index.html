@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decentralized Voting System</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #88d8c0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #88d8c0;
+        }
+        input, button {
+            background-color: #000;
+            color: #88d8c0;
+            border: 1px solid #88d8c0;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #88d8c0;
+            color: #000;
+            cursor: pointer;
+        }
+        #candidatesList {
+            margin-top: 20px;
+            color: #88d8c0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Decentralized Voting System</h1>
+
+    <div>
+        <h2>Add Candidate</h2>
+        <input type="text" id="candidateName" placeholder="Candidate Name">
+        <button onclick="addCandidate()">Add Candidate</button>
+    </div>
+
+    <div>
+        <h2>Vote for Candidate</h2>
+        <input type="number" id="candidateId" placeholder="Candidate ID">
+        <button onclick="vote()">Vote</button>
+    </div>
+
+    <div>
+        <h2>Check Vote Count</h2>
+        <input type="number" id="voteCandidateId" placeholder="Candidate ID">
+        <button onclick="getVoteCount()">Get Vote Count</button>
+        <p id="voteCount">Vote Count: </p>
+    </div>
+
+    <div id="candidatesList"></div> <!-- Display candidates here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="src/app.js"></script>
+
+</body>
+</html>
